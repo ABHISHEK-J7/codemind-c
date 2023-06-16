@@ -19,22 +19,22 @@ int main()
             {
                 if(arr[i]>arr[j])
                 {
-                x=arr[i];                    
-                arr[i]=arr[j];
-                arr[j]=x;
-                c++;
+                    x=arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=x;
+                    c++;
                 }
             }
         }
         if(c==0)
         {
-        printf("0
+            printf("0
 ");
         }
         else
         {
-        s=arr[a-1]-arr[0];
-        printf("%d
+            s=arr[a-1]-arr[0];
+            printf("%d
 ",s);
         }
     }
