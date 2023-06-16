@@ -19,7 +19,8 @@ int main(){
     else{
         for (i=0; i<a; i++){
             c=0;
-            for (j=i; j<a; j++){		if (arr[i]==arr[j]){
+            for (j=i; j<a; j++){
+                if (arr[i]==arr[j]){
                     c++;
                     if (c>v){
                         v=c;
