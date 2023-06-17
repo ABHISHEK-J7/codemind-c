@@ -2,65 +2,90 @@
 #include<string.h>
 int main()
 {
-    char str[100];
+    char str[1000];
     scanf("%s",str);
-    int n=strlen(str);
-    int c=0;
-    for(int i=0;i<n;i++){
-        if(str[i]=='I'){
-            c+=1;
+    int l=strlen(str);
+    int s=0;
+    for(int i=0;i<l;i++)
+    {
+        if(str[i]=='I')
+        {
+            s+=1;
         }
-        else if (str[i]=='V'){
-            if(str[i-1]=='I'){
-                c+=3;
+        else if(str[i]=='V')
+        {
+            if(str[i-1]=='I')
+            {
+                s+=3;
             }
-            else{
-                c+=5;
-            }
-        }
-        else if (str[i]=='X'){
-            if(str[i-1]=='I'){
-                c+=8;
-            }
-            else{
-                c+=10;
+            else
+            {
+                s+=5;
             }
         }
-        else if (str[i]=='L'){
-            if(str[i-1]=='X'){
-                c+=30;
+        else if(str[i]=='X')
+        {
+            if(str[i-1]=='I')
+            {
+                s+=8;
             }
-            else{
-                c+=50;
-            }
-        }
-        else if (str[i]=='C'){
-            if(str[i-1]=='X'){
-                c+=80;
-            }
-            else{
-                c+=100;
+            else
+            {
+                s+=10;
             }
         }
-        else if (str[i]=='D'){
-            if(str[i-1]=='C'){
-                c+=300;
+        else if(str[i]=='L')
+        {
+            if(str[i-1]=='X')
+            {
+                s+=30;
             }
-            else{
-                c+=500;
+            else
+            {
+                s+=50;
             }
         }
-        else if (str[i]=='M'){
-            if(str[i-1]=='C'){
-                c+=800;
+        else if(str[i]=='C')
+        {
+            if(str[i-1]=='X')
+            {
+                s+=80;
             }
-            if(str[i-1]=='X'){
-                c+=980;
+            else
+            {
+                s+=100;
             }
-            else{
-                c+=1000;
+        }
+        else if(str[i]=='D')
+        {
+            if(str[i-1]=='C')
+            {
+                s+=300;
+            }
+            else if(str[i]=='X')
+            {
+                s+=480;
+            }
+            else
+            {
+                s+=500;
+            }
+        }
+        else if(str[i]=='M')
+        {
+            if(str[i-1]=='C')
+            {
+                s+=800;
+            }
+            else if(str[i-1]=='X')
+            {
+                s+=980;
+            }
+            else
+            {
+                s+=1000;
             }
         }
     }
-    printf("%d",c);
+    printf("%d",s);
 }
