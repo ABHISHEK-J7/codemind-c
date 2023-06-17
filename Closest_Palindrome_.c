@@ -35,16 +35,19 @@ if(res2==k2)
 {
 pal2=k2;
 break;
-    
 }
-}    
-l=n-pal1;   
-u=pal2-n;   
-if(l>u)   
-{    
+}
+    l=n-pal1;
+    u=pal2-n;
+    if(l>u)
+    {
+
 printf("%d",pal2);
+
 }
+
 else if(l==u)
+
 {
 printf("%d %d",pal1,pal2);
 }
